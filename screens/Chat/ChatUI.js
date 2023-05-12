@@ -1,7 +1,7 @@
 import { ActivityIndicator, StyleSheet } from "react-native";
 import { Bubble, GiftedChat, Send } from "react-native-gifted-chat";
 import React, { useState, useCallback, useEffect } from "react";
-import { useIsFocused, useRoute } from "@react-navigation/native";
+import { useIsFocused, useRoute, useFocusEffect } from "@react-navigation/native";
 import { NativeBaseProvider, View } from "native-base";
 import { useFonts } from "expo-font";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -101,11 +101,10 @@ export default function ChatUI() {
         }
     };
 
-    useEffect(
+    useFocusEffect(
         React.useCallback(() => {
             getOldChats();
-        }),
-        [isFocused]
+        })
     );
 
     const onSend = useCallback((messages = []) => {

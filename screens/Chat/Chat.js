@@ -4,7 +4,7 @@ import {
     responsiveWidth,
     responsiveFontSize,
 } from "react-native-responsive-dimensions";
-import { useIsFocused, useNavigation } from "@react-navigation/native";
+import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
 import { NativeBaseProvider, Image, Text, View, HStack } from "native-base";
 import { useFonts } from "expo-font";
 import { TouchableOpacity } from "react-native";
@@ -155,7 +155,7 @@ export default function Chat() {
 
     useEffect(() => {
         getOldChats();
-    }, [isFocused]);
+    },[isFocused]);
 
     useLayoutEffect(() => {
         navigation.setOptions({
