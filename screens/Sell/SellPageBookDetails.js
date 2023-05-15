@@ -92,7 +92,7 @@ export default function SellPageBookDetails() {
     const getApiData = async () => {
         try {
             const res = await fetch(
-                `https://www.googleapis.com/books/v1/volumes?q=isbn:${route.params.isbnNumber}&key=AIzaSyDzFRk5Btsx9RgtSCH_RvUR1RF3fIAn_ZM`
+                `https://www.googleapis.com/books/v1/volumes?q=isbn:${route.params.isbnNumber}&key=YOURBOOKAPIKEY`
             );
             const myData = await res.json();
 

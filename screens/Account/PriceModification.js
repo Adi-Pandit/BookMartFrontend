@@ -5,7 +5,6 @@ import {
     Button,
     Text,
     View,
-    Stack,
     Input,
     HStack,
     VStack,
@@ -189,9 +188,6 @@ export default function PriceModification() {
                 <View top={350}>
                     <Center>
                     <Image
-                        //top={2}
-                        //left={250}
-                        //position={"absolute"}
                         borderWidth={2}
                         borderColor={"#000000"}
                         height={290}
@@ -241,7 +237,6 @@ const styles = StyleSheet.create({
         fontSize: responsiveFontSize(1.5),
         fontWeight: 400,
         lineHeight: 36,
-        //top: responsiveHeight(1),
         left: 10
     },
     EstPrice: {
@@ -297,26 +292,5 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
-    // animated: {
-    //     animation: "up-down 2s ease-in-out infinite alternate-reverse both"
-    // },
-      
-    // @-webkit-keyframes up-down: {
-    // 0%{
-    //     transform: translateY(10px);
-    // }
-    // 100%{
-    //     transform: translateY(-10px);
-    // }
-    // }
-    
-    // @keyframes up-down: {
-    // 0%{
-    //     transform: translateY(10px);
-    // }
-    // 100%{
-    //     transform: translateY(-10px);
-    // }
-    // }
-});
+})
 
